@@ -88,7 +88,7 @@
                         <input type="text" class="form-control" name="proTotalWeight" autocomplete="off" value="{{ old('proTotalWeight') }}" placeholder="产品总重" maxlength="80">
                       </div>
                       <div class="form-group">
-                        <label> 主石></label>
+                        <label> 主石</label>
                         <input type="text" class="form-control" name="mainStone" autocomplete="off" value="{{ old('mainStone') }}" placeholder="主石" maxlength="80">
                       </div>
                       <div class="form-group">
@@ -127,6 +127,10 @@
                       <div class="form-group">
                         <label>检测机构<small class="text-red">*</small></label>
                         <input type="text" class="form-control" name="testingFacility" autocomplete="off" value="{{ old('testingFacility', isset($product) ? $product->testingFacility : null) }}" placeholder="检测机构" maxlength="80">
+                      </div>
+                       <div class="form-group">
+                        <label>电话<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="companyTel" autocomplete="off" value="{{ old('companyTel') }}" placeholder="电话" maxlength="12">
                       </div>
 
                       <div class="form-group">

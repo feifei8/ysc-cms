@@ -25,8 +25,6 @@
     @show{{-- head区域 --}}
 </head>
 <body class="paper">
-<div id="solibk" style="font-size: 0px; background: url(&quot;data:image/gif;base64,R0lGODlhcAAaALMAAKurq+Xl5czMzPX19d/f38XFxdXV1b+/v+/v77W1tQAAAAAAAAAAAAAAAAAAAAAAACH5BAEHAAMALAAAAABwABoAAAT/cMhJq704BMyr2F0ojmSIBIQBgNdHsFQifoZwWAmMGUbpl4HeoGBBGFKED+JyO1EQAsNBQLhhnEuLVQDV/b6UYMorKbwO2QmVkHgBCEUCwXkJ2FZ1FBzMtxz3GS9CFAISVAMyFUdBQVYSAVMICI4TPAVZH32aZYZkA3IGORUaNZKFikEIRJQTUBkuhZmbYEEDSwKncQN6hJBJFwYbKAOsu4MWsXqesyanaAMCAETGBTU5GjBwx4pyv5Qoy1wac7XMP8vAHbmfFDcfG45/R3WcQqGA5iW4IsUUNTwHphkL0w9agilRJrQhti3fj0McqonQEIJHhxRp/DncyLGjx48g4EOKHEmypMmTKFOC6SYS3wSXIfbA/DFzxAENBfP1y8kEzoGaJH6CsWLFQAGJxCRUGWAU6Q1IEpraO7rzqBCiPYnBgSRgmtCvPrdOESpVgpWlRvcxrGG2bVIqN7AylONW7s66biuA1cp3Ct2+YfvihZu0HQy70JYGLED0MFW8WiDvDHxgrM9jezMPRltAFiu7QYwWnvBZb952ki9IvMmXNL7MlOuGFliYVRS2n+IamncaGm/fUpjwOHV7HSHWTKmAEFqJcPIqcIor1f0phXGVGJgz64w9JFJmort7ZMmMl7kIADs=&quot;) center center no-repeat; height: 0px;"></div>
-
 <div id="con_wrapper">
     <div id="r_con">
         <div class="header">
@@ -39,8 +37,8 @@
 
 
         <div class="footer">
-            <p class="slogan">designed &amp; developed by <a href="https://www.lingyusheng.com">凌宇升</a>  </p>
-            <p>&copy; 2018 版权所有 -{{cache('company_full_name')}} <a href="http://www.miibeian.gov.cn/">{{ cache('website_icp') }}</a></p>
+            <!-- <p class="slogan">designed &amp; developed by <a href="https://www.lingyusheng.com">凌宇升</a>  </p>
+            <p>&copy; 2018 版权所有 -{{cache('company_full_name')}} <a href="http://www.miibeian.gov.cn/">{{ cache('website_icp') }}</a></p> -->
         </div>
     </div>
 </div>

@@ -253,12 +253,12 @@ table th {
 }
 
 table th, table td {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   padding: 6px 13px;
 }
 
 table tr {
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
   background-color: #fff;
 }
 

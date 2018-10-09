@@ -85,6 +85,13 @@ class ProductController extends BackController
         $product->companyTel = $inputs['companyTel'];
         $product->description = e($inputs['description']);
 
+        $product->proTotalWeight = $inputs['proTotalWeight'];
+        $product->mainStone = $inputs['mainStone'];
+        $product->mainStoneWeight = $inputs['mainStoneWeight'];
+        $product->mainStoneClarity = $inputs['mainStoneClarity'];
+        $product->mainStoneColor = $inputs['mainStoneColor'];
+        $product->standard = $inputs['standard'];
+
         
         if($product->save()) {
             $scheme = empty($_SERVER['HTTPS']) ? 'http://' : 'https://';
@@ -138,6 +145,13 @@ class ProductController extends BackController
         $product->companyWebsite = $inputs['companyWebsite'];
         $product->companyTel = $inputs['companyTel'];
         $product->description = e($inputs['description']);
+        
+        $product->proTotalWeight = $inputs['proTotalWeight'];
+        $product->mainStone = $inputs['mainStone'];
+        $product->mainStoneWeight = $inputs['mainStoneWeight'];
+        $product->mainStoneClarity = $inputs['mainStoneClarity'];
+        $product->mainStoneColor = $inputs['mainStoneColor'];
+        $product->standard = $inputs['standard'];
         if($product->save()) {
             return redirect()->to(site_path('product', 'admin'))->with('message', '成功更新产品！');
         } else {

@@ -60,7 +60,10 @@
                         <td>电话：</td>
                         <td>{{$product->companyTel}}</td>
                     </tr>
-
+                     <tr>
+                        <td></td>
+                        <td>{{$product->companyTel}}</td>
+                    </tr>
                 </table>
             </div>
         </div>

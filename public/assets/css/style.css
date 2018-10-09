@@ -59,7 +59,7 @@ body.paper:after {
 #r_con .header{
     font-size: 24px;
     line-height: 55px;
-    border-bottom: 2px solid #676767;
+    /* border-bottom: 2px solid #676767; */
     color: #000000;
     text-align: center;
 }

@@ -15,7 +15,7 @@ class SystemOptionsSeeder extends Seeder
         DB::table('system_options')->insert([
             [
                 'name' => 'website_keywords',
-                'value' => '芽丝内容管理框架,基础开发版,芽丝网,YʌS Network',
+                'value' => 'yas cms',
             ],
             [
                 'name' => 'company_address',
@@ -23,7 +23,7 @@ class SystemOptionsSeeder extends Seeder
             ],
             [
                 'name' => 'website_title',
-                'value' => '芽丝内容管理框架 (YASCMF)',
+                'value' => '凌宇升内容管理框架',
             ],
             [
                 'name' => 'company_telephone',
@@ -31,7 +31,7 @@ class SystemOptionsSeeder extends Seeder
             ],
             [
                 'name' => 'company_full_name',
-                'value' => '芽丝网络科技有限公司',
+                'value' => '凌宇升络科技有限公司',
             ],
             [
                 'name' => 'website_icp',
@@ -55,15 +55,15 @@ class SystemOptionsSeeder extends Seeder
             ],
             [
                 'name' => 'company_short_name',
-                'value' => '芽丝网',
+                'value' => '凌宇升',
             ],
             [
                 'name' => 'system_author',
-                'value' => '豆芽丝',
+                'value' => '凌宇升',
             ],
             [
                 'name' => 'system_author_website',
-                'value' => 'http://douyasi.com'
+                'value' => 'http://lingyusheng.com'
             ],
             [
                 'name' => 'is_watermark',

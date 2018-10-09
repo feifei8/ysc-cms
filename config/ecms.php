@@ -8,45 +8,45 @@ return [
 
     //sidebar menu
     'sidebar' => [
-        [
-            'name' => '开发演示',
-            'icon' => 'fa-paper-plane',
-            'child_icon' => 'fa-file-o',
-            'sub_menu' => [
-                [
-                    'name' => '表单',
-                    'route' => 'admin:demo.form',
-                    'can' => '',
-                ],
-                [
-                    'name' => '图标',
-                    'route' => 'admin:demo.icon',
-                    'can' => '',
-                ],
-                [
-                    'name' => '更多',
-                    'route' => 'https://almsaeedstudio.com/',
-                    'can' => '',
-                ],
-            ],
-        ],
-        [
-            'name' => '内容管理',
-            'icon' => 'fa-edit',
-            'child_icon' => 'fa-star-o',
-            'sub_menu' => [
-                [
-                    'name' => '分类',
-                    'route' => 'admin:category.index',
-                    'can' => '@category',
-                ],
-                [
-                    'name' => '文章',
-                    'route' => 'admin:article.index',
-                    'can' => '@article',
-                ],
-            ],
-        ],
+        // [
+        //     'name' => '开发演示',
+        //     'icon' => 'fa-paper-plane',
+        //     'child_icon' => 'fa-file-o',
+        //     'sub_menu' => [
+        //         [
+        //             'name' => '表单',
+        //             'route' => 'admin:demo.form',
+        //             'can' => '',
+        //         ],
+        //         [
+        //             'name' => '图标',
+        //             'route' => 'admin:demo.icon',
+        //             'can' => '',
+        //         ],
+        //         [
+        //             'name' => '更多',
+        //             'route' => 'https://almsaeedstudio.com/',
+        //             'can' => '',
+        //         ],
+        //     ],
+        // ],
+        // [
+        //     'name' => '内容管理',
+        //     'icon' => 'fa-edit',
+        //     'child_icon' => 'fa-star-o',
+        //     'sub_menu' => [
+        //         [
+        //             'name' => '分类',
+        //             'route' => 'admin:category.index',
+        //             'can' => '@category',
+        //         ],
+        //         [
+        //             'name' => '文章',
+        //             'route' => 'admin:article.index',
+        //             'can' => '@article',
+        //         ],
+        //     ],
+        // ],
         [
             'name' => '产品管理',
             'icon' => 'fa-edit',

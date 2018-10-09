@@ -14,7 +14,8 @@ class productExt extends Model
                             'pid',
                             'name',
                             'value',
-                            'desc'
+                            'desc',
+                            'sort'
                         ];
 
     public function product()

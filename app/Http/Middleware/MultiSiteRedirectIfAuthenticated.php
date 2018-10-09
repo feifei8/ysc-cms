@@ -23,7 +23,7 @@ class MultiSiteRedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $site = null)
     {
-        $backend_home_url = config('site.route.prefix.admin', 'admin').'/dashboard';
+        $backend_home_url = config('site.route.prefix.admin', 'admin').'/product';
         $desktop_home_url = config('site.route.prefix.desktop', '').'/i/welcome.html';
         switch ($site) {
             case 'admin':

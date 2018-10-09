@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Douyasi\Http\Requests\ProductRequest;
 use Douyasi\Models\Product;
 use Douyasi\Models\Category;
+use Douyasi\Models\productExt;
 use Gate;
 use Maatwebsite\Excel\Facades\Excel;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
@@ -110,8 +111,9 @@ class ProductController extends BackController
         }
         $product = Product::find($id);
         $categories = Category::all();
+        $productExts = productExt::where('pid', '=', $id);
         is_null($product) AND abort(404);
-        return view('admin.back.product.edit', compact('product', 'categories'));
+        return view('admin.back.product.edit', compact('product', 'categories', 'productExts'));
     }
 
     public function update(ProductRequest $request, $id)
@@ -158,7 +160,7 @@ class ProductController extends BackController
             foreach($data as $key=>$value){
                 $products[]=[
                     'title' =>$value->产品名称,
-                    'cid' => 2,
+                    'cid' => 1,
                     'quality' => $value->产品质量,
                     'barcode' => $value->条码,
                     'certificateNo' => $value->证书编号,

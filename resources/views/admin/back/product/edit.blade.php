@@ -43,6 +43,7 @@
                   
                   <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">主要内容</a></li>
+                    <!-- <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">附加属性</a></li> -->
                   </ul>
                   <div class="tab-content">
                     
@@ -70,17 +71,43 @@
                         <input type="text" class="form-control" name="barcode" autocomplete="off" value="{{ old('barcode', isset($product) ? $product->barcode : null) }}" placeholder="条码" maxlength="80">
                       </div>
                       <div class="form-group">
-                        <label> 证书编号<small class="text-red">*</small></label>
+                        <label> 证书编号</label>
                         <input type="text" class="form-control" name="certificateNo" autocomplete="off" value="{{ old('certificateNo', isset($product) ? $product->certificateNo : null) }}" placeholder="证书编号" maxlength="80">
                       </div>
                       <div class="form-group">
-                        <label> 含金量<small class="text-red">*</small></label>
+                        <label> 含金量</label>
                         <input type="text" class="form-control" name="goldContent" autocomplete="off" value="{{ old('goldContent', isset($product) ? $product->goldContent : null) }}" placeholder="含金量" maxlength="80">
                       </div>
                       <div class="form-group">
-                        <label> 企业标准<small class="text-red">*</small></label>
+                        <label> 企业标准</label>
                         <input type="text" class="form-control" name="enterpriseStandard" autocomplete="off" value="{{ old('enterpriseStandard', isset($product) ? $product->enterpriseStandard : null) }}" placeholder="企业标准" maxlength="80">
                       </div>
+
+                       <div class="form-group">
+                        <label> 产品总重</label>
+                        <input type="text" class="form-control" name="proTotalWeight" autocomplete="off" value="{{ old('proTotalWeight') }}" placeholder="产品总重" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石></label>
+                        <input type="text" class="form-control" name="mainStone" autocomplete="off" value="{{ old('mainStone') }}" placeholder="主石" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石重量</label>
+                        <input type="text" class="form-control" name="mainStoneWeight" autocomplete="off" value="{{ old('mainStoneWeight') }}" placeholder="主石重量" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石净度</label>
+                        <input type="text" class="form-control" name="mainStoneClarity" autocomplete="off" value="{{ old('mainStoneClarity') }}" placeholder="主石净度" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石颜色</label>
+                        <input type="text" class="form-control" name="mainStoneColor" autocomplete="off" value="{{ old('mainStoneColor') }}" placeholder="主石颜色" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 执行标准</label>
+                        <input type="text" class="form-control" name="standard" autocomplete="off" value="{{ old('standard') }}" placeholder="企业标准" maxlength="80">
+                      </div>
+
                       <div class="form-group">
                         <label>公司名称<small class="text-red">*</small></label>
                         <input type="text" class="form-control" name="companyName" autocomplete="off" value="{{ old('companyName', isset($product) ? $product->companyName : null) }}" placeholder="公司名称" maxlength="80">
@@ -108,8 +135,21 @@
                       </div>
 
                     </div><!-- /.tab-pane -->
+                    <!-- <div class="tab-pane" id="tab_2">
+                      <a href="{{ _route('admin:product.create') }}" class="btn btn-primary margin-bottom">新增属性</a>
+                      @foreach ($productExts as $pExs)
+                      <div class="form-group">
+                       <div>
+                          <span>属性名称</span>
+                          <input type="text" class="form-control" name="name-{{isset($pExs) ? $pExs->id : null}}" autocomplete="off" value="{{ old(isset($pExs) ? $pExs->id : null, isset($pExs) ? $pExs->name : null) }}" placeholder="属性名称" maxlength="80">
+                          <span>属性值</span>
+                          <input type="text" class="form-control" name="value-{{isset($pExs) ? $pExs->id : null}}" autocomplete="off" value="{{ old(isset($pExs) ? $pExs->id : null, isset($pExs) ? $pExs->value : null) }}" placeholder="属性值" maxlength="80">
+                       </div>
+                      </div>
+                      @endforeach
+                    </div> -->
 
-                    <button type="submit" class="btn btn-primary">修改文章</button>
+                    <button type="submit" class="btn btn-primary">修改产品</button>
 
                   </div><!-- /.tab-content -->
                   

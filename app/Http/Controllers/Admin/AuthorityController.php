@@ -32,7 +32,7 @@ class AuthorityController extends BackController
     public function postLogin(Request $request)
     {
         //控制面板路径
-        $redirectTo = site_path('dashboard', 'admin');
+        $redirectTo = site_path('product', 'admin');
         //认证凭证
         $credentials = [
             'username'  => $request->input('username'),

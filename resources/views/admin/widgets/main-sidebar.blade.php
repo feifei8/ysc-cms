@@ -34,8 +34,8 @@
             <li class="header">主导航栏</li>
 
             <!--无子节点的一级导航节点-->
-            <li><a href="{{ site_url('dashboard', 'admin') }}"><i class="fa fa-dashboard"></i> <span>控制台</span> </a></li>
-            <li><a href="{{ site_url('cache', 'admin') }}"><i class="fa fa-eraser"></i> <span>重建缓存</span> </a></li>
+            <!-- <li><a href="{{ site_url('dashboard', 'admin') }}"><i class="fa fa-dashboard"></i> <span>控制台</span> </a></li>
+            <li><a href="{{ site_url('cache', 'admin') }}"><i class="fa fa-eraser"></i> <span>重建缓存</span> </a></li> -->
 
             <!--自定义二次开发导航区域 START-->
 
@@ -76,12 +76,12 @@
                 @can('@user')
                 <li><a href="{{ site_url('user', 'admin') }}"><i class="fa fa-circle-o"></i>管理员(用户)</a></li>
                 @endcan
-                @can('@role')
+                <!-- @can('@role')
                 <li><a href="{{ site_url('role', 'admin') }}"><i class="fa fa-circle-o"></i>角色</a></li>
                 @endcan
                 @can('@permission')
                 <li><a href="{{ site_url('permission', 'admin') }}"><i class="fa fa-circle-o"></i>权限</a></li>
-                @endcan
+                @endcan -->
               </ul>
             </li>
             <!--//用户管理 treeview-->

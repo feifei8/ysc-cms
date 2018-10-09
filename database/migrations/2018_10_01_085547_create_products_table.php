@@ -28,7 +28,15 @@ class CreateProductsTable extends Migration
             $table->string('testingFacility', 100)->nullable()->default('')->comment('检测机构');
             $table->string('companyTel', 50)->nullable()->default('')->comment('电话');
             $table->string('QRcode', 200)->nullable()->comment('二维码');
-            $table->string('description')->nullable()->comment('备注');
+            $table->string('description',500)->nullable()->comment('备注');
+
+            $table->string('proTotalWeight', 50)->nullable()->comment('产品总重');
+            $table->string('mainStone', 100)->nullable()->comment('主石');
+            $table->string('mainStoneWeight', 50)->nullable()->comment('主石重量');
+            $table->string('mainStoneClarity', 100)->nullable()->comment('主石净度');
+            $table->string('mainStoneColor', 100)->nullable()->comment('主石颜色');
+            $table->string('standard', 100)->nullable()->comment('执行标准');
+
             $table->timestamps();
         });
     }

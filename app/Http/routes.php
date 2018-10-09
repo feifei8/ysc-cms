@@ -109,7 +109,8 @@ Route::group(['prefix' => $_ap, 'namespace' => 'Admin', 'middleware' => ['block:
             Route::resource('picture', 'PictureController');
             #产品
             Route::resource('product', 'ProductController');
-
+            #属性配置
+            Route::resource('config', 'ConfigController');
             //自定义模型管理
             
             /*

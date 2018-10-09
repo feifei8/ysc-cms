@@ -47,12 +47,20 @@
                       <!--tr-th start-->
                       <tr>
                         <th>操作</th>
-                        <th>标题</th>
+                        <th>产品名称</th>
                         <th>产品质量</th>
                         <th>条码</th>
                         <th>证书编号</th>
                         <th>含金量</th>
                         <th>企业标准</th>
+
+                        <th>产品总重</th>
+                        <th>主石</th>
+                        <th>主石重量</th>
+                        <th>主石净度</th>
+                        <th>主石颜色</th>
+                        <th>执行标准</th>
+
                         <th>公司名称</th>
                         <th>公司地址</th>
                         <th>客服电话</th>
@@ -79,6 +87,15 @@
                         <td >{{ $art->certificateNo }}</td>
                         <td >{{ $art->goldContent }}</td>
                         <td >{{ $art->enterpriseStandard }}</td>
+
+                        <td >{{ $art->proTotalWeight }}</td>
+                        <td >{{ $art->mainStone }}</td>
+                        <td >{{ $art->mainStoneWeight }}</td>
+                        <td >{{ $art->mainStoneClarity }}</td>
+                        <td >{{ $art->mainStoneColor }}</td>
+                        <td >{{ $art->standard }}</td>
+                  
+
                         <td >{{ $art->companyName }}</td>
                         <td >{{ $art->companyAddress }}</td>
                         <td >{{ $art->serviceTel }}</td>

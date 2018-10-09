@@ -81,6 +81,32 @@
                         <label> 企业标准<small class="text-red">*</small></label>
                         <input type="text" class="form-control" name="enterpriseStandard" autocomplete="off" value="{{ old('enterpriseStandard') }}" placeholder="企业标准" maxlength="80">
                       </div>
+                      
+                      <div class="form-group">
+                        <label> 产品总重<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="proTotalWeight" autocomplete="off" value="{{ old('proTotalWeight') }}" placeholder="产品总重" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="mainStone" autocomplete="off" value="{{ old('mainStone') }}" placeholder="主石" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石重量<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="mainStoneWeight" autocomplete="off" value="{{ old('mainStoneWeight') }}" placeholder="主石重量" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石净度<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="mainStoneClarity" autocomplete="off" value="{{ old('mainStoneClarity') }}" placeholder="主石净度" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石颜色<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="mainStoneColor" autocomplete="off" value="{{ old('mainStoneColor') }}" placeholder="主石颜色" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 执行标准<small class="text-red">*</small></label>
+                        <input type="text" class="form-control" name="standard" autocomplete="off" value="{{ old('standard') }}" placeholder="企业标准" maxlength="80">
+                      </div>
+
                       <div class="form-group">
                         <label>公司名称<small class="text-red">*</small></label>
                         <input type="text" class="form-control" name="companyName" autocomplete="off" value="{{ old('companyName') }}" placeholder="公司名称" maxlength="80">

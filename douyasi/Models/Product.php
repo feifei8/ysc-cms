@@ -24,7 +24,14 @@ class product extends Model
                             'companyWebsite',
                             'testingFacility',
                             'companyTel',
-                            'QRcode'
+                            'QRcode',
+
+                            'proTotalWeight',
+                            'mainStone',
+                            'mainStoneWeight',
+                            'mainStoneClarity',
+                            'mainStoneColor',
+                            'standard'
 
                         ];
 

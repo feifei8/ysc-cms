@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c5b132de798c5ba530e0d097555b3646",
+    "content-hash": "69909b78dd1f7eea8db9ca170c456234",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1046,16 +1046,16 @@
         },
         {
             "name": "milon/barcode",
-            "version": "5.1.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/milon/barcode.git",
-                "reference": "a3e2c3f43c60020d2f5ace8ce69ccb97dea187c4"
+                "reference": "c2756ae40090e05d3d5f3fe25a36f962da47964b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/milon/barcode/zipball/a3e2c3f43c60020d2f5ace8ce69ccb97dea187c4",
-                "reference": "a3e2c3f43c60020d2f5ace8ce69ccb97dea187c4",
+                "url": "https://api.github.com/repos/milon/barcode/zipball/c2756ae40090e05d3d5f3fe25a36f962da47964b",
+                "reference": "c2756ae40090e05d3d5f3fe25a36f962da47964b",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1081,7 +1081,7 @@
             "authors": [
                 {
                     "name": "Nuruzzaman Milon",
-                    "email": "contact@milon.im"
+                    "email": "milon521@gmail.com"
                 }
             ],
             "description": "Barcode generator like Qr Code , PDF417,C39, C39+,C39E,C39E+,C93,S25,S25+,I25,I25+,C128,C128A,C128B,C128C,2-Digits UPC-Based Extention,5-Digits UPC-Based Extention,EAN 8,EAN 13,UPC-A,UPC-E,MSI (Variation of Plessey code) ",
@@ -1097,7 +1097,7 @@
                 "qr code",
                 "qrcode"
             ],
-            "time": "2016-01-13T04:20:49+00:00"
+            "time": "2016-10-18T04:59:46+00:00"
         },
         {
             "name": "monolog/monolog",

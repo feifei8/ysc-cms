@@ -145,7 +145,7 @@ class ProductController extends BackController
         $product->companyWebsite = $inputs['companyWebsite'];
         $product->companyTel = $inputs['companyTel'];
         $product->description = e($inputs['description']);
-        
+
         $product->proTotalWeight = $inputs['proTotalWeight'];
         $product->mainStone = $inputs['mainStone'];
         $product->mainStoneWeight = $inputs['mainStoneWeight'];
@@ -174,7 +174,7 @@ class ProductController extends BackController
             foreach($data as $key=>$value){
                 $products[]=[
                     'title' =>$value->产品名称,
-                    'cid' => 1,
+                    'cid' => $value->产品分类,
                     'quality' => $value->产品质量,
                     'barcode' => $value->条码,
                     'certificateNo' => $value->证书编号,
@@ -187,6 +187,13 @@ class ProductController extends BackController
                     'testingFacility' => $value->检测机构,
                     'companyTel' => $value->电话,
                     'description' => $value->备注,
+
+                    'proTotalWeight' => $value->产品总重,
+                    'mainStone' => $value->主石,
+                    'mainStoneWeight' => $value->主石重量,
+                    'mainStoneClarity' => $value->主石净度,
+                    'mainStoneColor' => $value->主石颜色,
+                    'standard' => $value->执行标准,
                 ];
             }
             //dd($products);
@@ -209,20 +216,22 @@ class ProductController extends BackController
         $products = Product::all();
         //dd($products);
         $cellData = [
-            ['序号','产品名称','产品质量','条码','证书编号','含金量','企业标准','公司名称','公司地址','客服电话','公司网址','检测机构','电话','二维码','备注']
+            ['序号','产品名称','产品质量','条码','证书编号','含金量', '产品总重', '主石', '主石重量', '主石净度', '主石颜色', '执行标准', '企业标准','公司名称','公司地址','客服电话','公司网址','检测机构','电话','二维码','备注']
         ];
         $scheme = empty($_SERVER['HTTPS']) ? 'http://' : 'https://';
         $host = $scheme.$_SERVER['HTTP_HOST'];
+        $url="";
         foreach ($products as $key => $value){
+            $category = Category::where('id', '=', $value->cid)->first();
+            if ($category) {
+                $url = $host . "/" . $category->slug . "/" . $value->id . ".html";
+              
+            }
             if(!file_exists(public_path('qrcodes/'.$value->id.'.png'))){
                 if(!file_exists(public_path('qrcodes')))
                     mkdir(public_path('qrcodes'));
-                
-                $category = Category::where('id', '=', $value->cid)->first();
-                if($category){
-                    $url=$host."/".$category->slug."/".$value->id.".html";
-                    QrCode::format('png')->size(200)->generate($url, public_path('qrcodes/'.$value->id.'.png'));
-                }
+
+                QrCode::format('png')->size(200)->generate($url, public_path('qrcodes/' . $value->id . '.png'));
             
             }
             $product=[];
@@ -232,6 +241,14 @@ class ProductController extends BackController
             array_push($product,$value->barcode);
             array_push($product,$value->certificateNo);
             array_push($product,$value->goldContent);
+
+            array_push($product, $value->proTotalWeight);
+            array_push($product, $value->mainStone);
+            array_push($product, $value->mainStoneWeight);
+            array_push($product, $value->mainStoneClarity);
+            array_push($product, $value->mainStoneColor);
+            array_push($product, $value->standard);
+
             array_push($product,$value->enterpriseStandard);
             array_push($product,$value->companyName);
             array_push($product,$value->companyAddress);
@@ -239,7 +256,7 @@ class ProductController extends BackController
             array_push($product,$value->companyWebsite);
             array_push($product,$value->testingFacility);
             array_push($product,$value->companyTel);
-            array_push($product,'');
+            array_push($product, $url);
             array_push($product,$value->description);
             array_push($cellData,$product);
         }
@@ -247,27 +264,27 @@ class ProductController extends BackController
         Excel::create('产品列表',function ($excel) use ($cellData ){
             $excel->sheet('sheet1', function ($sheet) use ($cellData ){
              $sheet->rows($cellData);
-             foreach ($cellData as $key => $item) {
-                    if($key>0){
-                        //计算列名
-                        $x = "N";
-                        //用网络地址换取本地存储路径
-                        $cloudImg = public_path('qrcodes/'.$item[0].'.png');
-                        $objDrawing = new \PHPExcel_Worksheet_Drawing();
-                        $objDrawing->setPath($cloudImg);
-                        //设置图片坐标(单元格)
-                        $objDrawing->setCoordinates($x . ($key + 1));
-                        //限定图片高度
-                        $objDrawing->setHeight(100);
-                        //图片在单元格中的偏移位置(若不设置则图位于单元格左上方)
-                        $objDrawing->setOffsetX(10);
-                        $objDrawing->setOffsetY(10);
-                        $objDrawing->setRotation(100);
-                        $objDrawing->setWorksheet($sheet);
-                        //如果有图片，把列拉宽
-                        $sheet->setWidth([$x => 40]);
-                    }
-            }
+            //  foreach ($cellData as $key => $item) {
+            //         if($key>0){
+            //             //计算列名
+            //             $x = "N";
+            //             //用网络地址换取本地存储路径
+            //             $cloudImg = public_path('qrcodes/'.$item[0].'.png');
+            //             $objDrawing = new \PHPExcel_Worksheet_Drawing();
+            //             $objDrawing->setPath($cloudImg);
+            //             //设置图片坐标(单元格)
+            //             $objDrawing->setCoordinates($x . ($key + 1));
+            //             //限定图片高度
+            //             $objDrawing->setHeight(100);
+            //             //图片在单元格中的偏移位置(若不设置则图位于单元格左上方)
+            //             $objDrawing->setOffsetX(10);
+            //             $objDrawing->setOffsetY(10);
+            //             $objDrawing->setRotation(100);
+            //             $objDrawing->setWorksheet($sheet);
+            //             //如果有图片，把列拉宽
+            //             $sheet->setWidth([$x => 40]);
+            //         }
+            // }
     
     
             //设置单元格样式(第一行为title)
@@ -275,28 +292,34 @@ class ProductController extends BackController
             $sheet->setHeight([1=>20]);
             for ($c = 2; $c <=$setCount; $c++) {
                 $sheet->setHeight([//设置第二行起每一行的高度
-                    $c => 100,
+                    $c => 20,
                 ]);
             }
     
             //设置每一行宽度
-            // $sheet->setWidth([
-            //     'A' => 10,
-            //     'B' => 50,
-            //     'C' => 20,
-            //     'D' => 30,
-            //     'E' => 30,
-            //     'F' => 20,
-            //     'G' => 30,
-            //     'H' => 30,
-            //     'I' => 30,
-            //     'J' => 20,
-            //     'K' => 30,
-            //     'L' => 30,
-            //     'M' => 20,
-            //     'N' => 50,
-            //     'O' => 30,
-            // ]);
+            $sheet->setWidth([
+                'A' => 5,
+                'B' => 30,
+                'C' => 10,
+                'D' => 10,
+                'E' => 10,
+                'F' => 10,
+                'G' => 10,
+                'H' => 10,
+                'I' => 10,
+                'J' => 10,
+                'K' => 10,
+                'L' => 30,
+                'M' => 20,
+                'N' => 30,
+                'O' => 30,
+                'P' => 20,
+                'Q' => 30,
+                'R' => 30,
+                'S' => 20,
+                'T' => 30,
+                'U' => 30,
+            ]);
     
             //计算总数据量
             $count = count($cellData);
@@ -306,7 +329,7 @@ class ProductController extends BackController
                 $cells->setValignment('top');
             });
             //标题加粗
-            $sheet->cells("A1:N1", function ($cells) {
+            $sheet->cells("A1:U1", function ($cells) {
                 $cells->setFontWeight('bold');
             });
             });

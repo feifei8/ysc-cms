@@ -164,7 +164,9 @@ return [
         // excel
         Maatwebsite\Excel\ExcelServiceProvider::class,
         // 二维码
-        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        // 条码
+        Milon\Barcode\BarcodeServiceProvider::class
     ],
 
     /*
@@ -215,7 +217,9 @@ return [
          * Third Party Alias...
          */
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
     ],
 
 ];

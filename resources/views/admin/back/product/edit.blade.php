@@ -78,36 +78,36 @@
                         <label> 含金量</label>
                         <input type="text" class="form-control" name="goldContent" autocomplete="off" value="{{ old('goldContent', isset($product) ? $product->goldContent : null) }}" placeholder="含金量" maxlength="80">
                       </div>
+                      
+
+                       <div class="form-group">
+                        <label> 产品总重</label>
+                        <input type="text" class="form-control" name="proTotalWeight" autocomplete="off" value="{{old('proTotalWeight', isset($product) ? $product->proTotalWeight : null) }} " placeholder="产品总重" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石</label>
+                        <input type="text" class="form-control" name="mainStone" autocomplete="off" value="{{old('mainStone', isset($product) ? $product->mainStone : null) }}" placeholder="主石" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石重量</label>
+                        <input type="text" class="form-control" name="mainStoneWeight" autocomplete="off" value="{{old('mainStoneWeight', isset($product) ? $product->mainStoneWeight : null) }}" placeholder="主石重量" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石净度</label>
+                        <input type="text" class="form-control" name="mainStoneClarity" autocomplete="off" value="{{old('mainStoneClarity', isset($product) ? $product->mainStoneClarity : null) }}" placeholder="主石净度" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 主石颜色</label>
+                        <input type="text" class="form-control" name="mainStoneColor" autocomplete="off" value="{{old('mainStoneColor', isset($product) ? $product->mainStoneColor : null) }}" placeholder="主石颜色" maxlength="80">
+                      </div>
+                      <div class="form-group">
+                        <label> 执行标准</label>
+                        <input type="text" class="form-control" name="standard" autocomplete="off" value="{{old('standard', isset($product) ? $product->standard : null) }}" placeholder="企业标准" maxlength="80">
+                      </div>
                       <div class="form-group">
                         <label> 企业标准</label>
                         <input type="text" class="form-control" name="enterpriseStandard" autocomplete="off" value="{{ old('enterpriseStandard', isset($product) ? $product->enterpriseStandard : null) }}" placeholder="企业标准" maxlength="80">
                       </div>
-
-                       <div class="form-group">
-                        <label> 产品总重</label>
-                        <input type="text" class="form-control" name="proTotalWeight" autocomplete="off" value="{{ old('proTotalWeight') }}" placeholder="产品总重" maxlength="80">
-                      </div>
-                      <div class="form-group">
-                        <label> 主石</label>
-                        <input type="text" class="form-control" name="mainStone" autocomplete="off" value="{{ old('mainStone') }}" placeholder="主石" maxlength="80">
-                      </div>
-                      <div class="form-group">
-                        <label> 主石重量</label>
-                        <input type="text" class="form-control" name="mainStoneWeight" autocomplete="off" value="{{ old('mainStoneWeight') }}" placeholder="主石重量" maxlength="80">
-                      </div>
-                      <div class="form-group">
-                        <label> 主石净度</label>
-                        <input type="text" class="form-control" name="mainStoneClarity" autocomplete="off" value="{{ old('mainStoneClarity') }}" placeholder="主石净度" maxlength="80">
-                      </div>
-                      <div class="form-group">
-                        <label> 主石颜色</label>
-                        <input type="text" class="form-control" name="mainStoneColor" autocomplete="off" value="{{ old('mainStoneColor') }}" placeholder="主石颜色" maxlength="80">
-                      </div>
-                      <div class="form-group">
-                        <label> 执行标准</label>
-                        <input type="text" class="form-control" name="standard" autocomplete="off" value="{{ old('standard') }}" placeholder="企业标准" maxlength="80">
-                      </div>
-
                       <div class="form-group">
                         <label>公司名称<small class="text-red">*</small></label>
                         <input type="text" class="form-control" name="companyName" autocomplete="off" value="{{ old('companyName', isset($product) ? $product->companyName : null) }}" placeholder="公司名称" maxlength="80">
@@ -130,7 +130,7 @@
                       </div>
                        <div class="form-group">
                         <label>电话<small class="text-red">*</small></label>
-                        <input type="text" class="form-control" name="companyTel" autocomplete="off" value="{{ old('companyTel') }}" placeholder="电话" maxlength="12">
+                        <input type="text" class="form-control" name="companyTel" autocomplete="off" value="{{ old('companyTel', isset($product) ? $product->companyTel : null) }}" placeholder="电话" maxlength="12">
                       </div>
 
                       <div class="form-group">
